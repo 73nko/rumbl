@@ -1,0 +1,4 @@
+<h1>Showing User</h1>
+<b><%= render "user.html",user: @user %>
+<hr />
+<%= link "Go Back",to: "/users" %>
