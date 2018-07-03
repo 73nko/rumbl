@@ -1,5 +1,5 @@
 defmodule Rumbl.Router do
-  use Rumbl.Web, :router
+  use Rumbl.Web,:router
 
   pipeline :browser do
     plug :accepts, ["html"]
@@ -19,5 +19,6 @@ defmodule Rumbl.Router do
 
     get "/", PageController, :index
     resources "/users", UserController, only: [:index, :show, :new, :create]
+    resources "/sessions", SessionController, only: [:new, :create, :delete]
   end
 end
